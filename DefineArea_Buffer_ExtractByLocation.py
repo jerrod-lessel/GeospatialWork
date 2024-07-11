@@ -1,3 +1,5 @@
+# This process and script is adapted from the book 'Python for Geospatial Data Analysis' by Bonny P. McClain.
+
 from qgis import processing
 
 # List of all agorithms within QGIS
