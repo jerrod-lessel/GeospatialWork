@@ -1,5 +1,5 @@
 # This process and script is adapted from the book 'Python for Geospatial Data Analysis' by Bonny P. McClain.
-# It is meant to find a particular river, then create a buffer around that river, and finally find places that lie along that river within the buffer zone.
+# It is meant to be used in QGIS and to find a particular river, then create a buffer around that river, and finally find places that lie along that river within the buffer zone.
 
 from qgis import processing
 
