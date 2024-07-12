@@ -122,8 +122,11 @@ Map.addLayer(highConfDif,{palette:'888800'}, 'High Confidence 10-20',false);
 var summed1Dif = cdl_yearsDif.select('cropland').map(allCrop).sum();
 //Map.addLayer(summed1Dif,{min:0,max:12,palette:['000000','ffffff']}, 'All Crop Sum',false);
 
-var summedDif = (summed1Dif.mask(summed1Dif.gt(0))).divide(11); //<- change the number being divided by the number of years
-Map.addLayer(summedDif,{min:0,max:1,palette:['000000','00ff00']}, 'Summed crops float 10-20',false);
+var numYear = cdl_yearsDif.size();
+//print(numYear);
+
+var summedDif1 = (summed1Dif.mask(summed1Dif.gt(0))).divide(numYear);
+Map.addLayer(summedDif1,{min:0,max:1,palette:['000000','00ff00']}, 'Summed crops float 10-20',false);
 
 //////////////////////////////////////////////////////////Export//////////////////////////////////////////////////////////
 
